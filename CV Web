@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas Kerneis | CV</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-YcsIP+QeWw9m0v5f0H2Q5JwF3YwJ0h1u7qK2+H3Jg8n6Qy2v3K0F5eJr8Y4vJf9Jr9d3Yx6r8j3Zqf6sKJ3o0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+        
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .vanta-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.25;
+        }
+        
+        .font-space {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .skill-pill {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .project-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: center;
+        }
+        
+        .project-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .input-field {
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .input-field:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Vanta.js Background -->
+    <div id="vanta-bg" class="vanta-bg"></div>
+    
+    <!-- Main Container -->
+    <div id="cvRoot" class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row justify-between items-center mb-12">
+            <div class="mb-6 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold font-space bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Nicolas Kerneis</h1>
+                <p class="text-gray-600 mt-2">Voici mon curriculum vitae interactif.</p>
+            </div>
+        </header>
+
+        <!-- Profile Section -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-12">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-indigo-100 shadow-md mb-6 md:mb-0 md:mr-8">
+                    <img src="http://static.photos/technology/320x240/42" alt="Profile Picture" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-1">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                        <div>
+                            <h2 class="text-3xl font-bold font-space" id="name">Nicolas Kerneis</h2>
+                            <p class="text-indigo-600 font-medium" id="title">Etudiant en BTS SIO.</p>
+                        </div>
+                        <div class="flex space-x-2 mt-4 md:mt-0">
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
+                                <i data-feather="github"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
+                                <i data-feather="linkedin"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
+                                <i data-feather="twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
+                                <i data-feather="mail"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4" id="bio">Étudiant Français en BTS Services Informatiques aux Organisations de 17 ans, passionné par le développement web, logiciel et de l'hardware, j'aimerais après l'obtention de mon BTS poursuivre mes études afin de pouvoir faire de ma passion mon métier.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">HTML</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">CSS</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">PHP</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Hardware</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Two Column Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left Column -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- About Section -->
+                <section class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold font-space flex items-center">
+                            <i data-feather="user" class="mr-2 text-indigo-600"></i> A propos de moi
+                        </h2>
+                    </div>
+                    <p class="text-gray-600 mb-4" id="aboutText">
+                        Né dans une génération digitalisée, depuis mon enfance, je côtoie les appareils numériques.
+                        Télévision connectée, smartphone, Tablette, Ordinateurs…<br><hl>
+                        &nbsp;<br>
+                        J'ai été très rapidement sensibilisé à cet univers qui m'a très vite passionné.
+                        Je me suis intéressé au hardware en premier et vers mes 17 ans, j'ai décidé d'essayer le développement par le biais de mes études. Ce qui fut une révélation.<br>
+                        &nbsp;<br>
+                        Aujourd'hui, je souhaite en faire mon métier, et évoluer dans ce milieu si enrichissant.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <i data-feather="map-pin" class="text-indigo-600 mr-2"></i>
+                            <span id="location">Brest, France</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="mail" class="text-indigo-600 mr-2"></i>
+                            <span id="email">nikerneis@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="phone" class="text-indigo-600 mr-2"></i>
+                            <span id="phone">(+33) 7 88 56 40 60</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="calendar" class="text-indigo-600 mr-2"></i>
+                            <span id="experience">17 ans</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Experience Section -->
+                <section class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold font-space flex items-center">
+                            <i data-feather="briefcase" class="mr-2 text-indigo-600"></i>Expériences en milieu professionnel
+                        </h2>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <!-- Experience Item -->
+                        <div class="border-l-2 border-indigo-200 pl-6 pb-6 relative">
+                            <div class="absolute -left-2 top-0 w-4 h-4 bg-indigo-600 rounded-full"></div>
+                            <div class="flex flex-col md:flex-row md:justify-between">
+                                <h3 class="text-lg font-bold">Unik Informatique - Briec</h3>
+                                <span class="text-sm text-gray-500 md:mt-0 mt-1">26 Mai - 04 Juillet 2025</span>
+                            </div>
+                            <p class="text-indigo-600 font-medium">Technico-commercial</p>
+                            <p class="text-gray-600 mt-2">
+                                J'ai rejoint une équipe compétente de l'agence de Briec.
+                                Ils m'ont confié différentes tâches comme principalement le diagnostique de panne sur des ordinateurs fixe/portable, mais ils m'ont également inculqué des notions de vente, la relation client, le langage a utilisé avec des clients, la responsabilité de fournir un service de qualité, mais également accessible à tous les clients.<br>
+                                &nbsp;<br>
+
+                                Ce stage me fut très enrichissant, je remercie l'équipe d'Unik Informatique - Briec de m'avoir accueilli.
+                            </p>
+                        </div>
+                        
+                        <!-- Experience Item -->
+                        <div class="border-l-2 border-indigo-200 pl-6 pb-6 relative">
+                            <div class="absolute -left-2 top-0 w-4 h-4 bg-indigo-600 rounded-full"></div>
+                            <div class="flex flex-col md:flex-row md:justify-between">
+                                <h3 class="text-lg font-bold">Apollo Micro - Fouesnant</h3>
+                                <span class="text-sm text-gray-500 md:mt-0 mt-1">17 Semaines sur 3 ans</span>
+                            </div>
+                            <p class="text-indigo-600 font-medium">Réparateur informatique</p>
+                            <p class="text-gray-600 mt-2">
+                               M. Milleret, m'a accueilli dans son entreprise ancien technicien réseaux dans l'armée de l'air.<br>
+                               Aujourd'hui Informaticiens, il m'a partagé sa passion et son expérience dans le milieu.<br>
+                               &nbsp;<br>
+                               J'ai eu l'occasion de diagnostiquer plusieurs pannes, sur des réseaux, des ordinateurs portables et fixe.<br>
+                               Il m'a également été permis de faire du reconditionnement d'ordinateur en autonomie.<br>
+                               &nbsp;<br>
+                               Recherche des pannes/défaut, devis de remplacements des pièces puis réparation de l'ordinateur et estimation du prix.
+                               Merci à M. Milleret pour cette expérience et c'est nombreuse compétences transmise. 
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Projects Section -->
+                <section class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold font-space flex items-center">
+                            <i data-feather="code" class="mr-2 text-indigo-600"></i> Projects
+                        </h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Project Card -->
+                        <div class="project-card bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm">
+                            <div class="h-40 bg-indigo-50 overflow-hidden">
+                                <img src="http://static.photos/technology/640x360/10" alt="Project" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-bold text-lg mb-1">E-commerce Platform</h3>
+                                <p class="text-gray-600 text-sm mb-3">A full-featured online store with payment integration</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs">React</span>
+                                    <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs">Node.js</span>
+                                    <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs">MongoDB</span>
+                                </div>
+                                <div class="mt-4 flex justify-between items-center">
+                                    <a href="#" class="text-indigo-600 text-sm flex items-center">
+                                        <i data-feather="external-link" class="mr-1 w-4 h-4"></i> Live Demo
+                                    </a>
+                                    <a href="#" class="text-gray-600 text-sm flex items-center">
+                                        <i data-feather="github" class="mr-1 w-4 h-4"></i> Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Card -->
+                        <div class="project-card bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm">
+                            <div class="h-40 bg-indigo-50 overflow-hidden">
+                                <img src="http://static.photos/technology/640x360/20" alt="Project" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <h3 class="font-bold text-lg mb-1">Task Management App</h3>
+                                <p class="text-gray-600 text-sm mb-3">Kanban-style productivity application</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs">Vue.js</span>
+                                    <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs">Firebase</span>
+                                    <span class="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs">Tailwind</span>
+                                </div>
+                                <div class="mt-4 flex justify-between items-center">
+                                    <a href="#" class="text-indigo-600 text-sm flex items-center">
+                                        <i data-feather="external-link" class="mr-1 w-4 h-4"></i> Live Demo
+                                    </a>
+                                    <a href="#" class="text-gray-600 text-sm flex items-center">
+                                        <i data-feather="github" class="mr-1 w-4 h-4"></i> Code
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="space-y-8">
+                <!-- Skills Section -->
+                <section class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold font-space flex items-center">
+                            <i data-feather="award" class="mr-2 text-indigo-600"></i> Skills
+                        </h2>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="font-medium text-gray-700 mb-2">Débutant</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">HTML</span>
+                                <span class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">JavaScript</span>
+                                <span class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">HTML/CSS</span>
+                                <span class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">PHP</span>
+                                <span class="skill-pill px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education Section -->
+                <section class="bg-white rounded-xl shadow-lg p-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-2xl font-bold font-space flex items-center">
+                            <i data-feather="book" class="mr-2 text-indigo-600"></i> Education
+                        </h2>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="border-l-2 border-indigo-200 pl-4 pb-4 relative">
+                            <div class="absolute -left-2 top-0 w-4 h-4 bg-indigo-600 rounded-full"></div>
+                            <h3 class="font-bold">Brevet des colleges</h3>
+                            <p class="text-indigo-600 text-sm">College Kervihan - Fouesnant</p>
+                            <p class="text-gray-500 text-sm">Mention : Bien   -    2022</p>
+                        </div>
+                        
+                        <div class="border-l-2 border-indigo-200 pl-4 pb-4 relative">
+                            <div class="absolute -left-2 top-0 w-4 h-4 bg-indigo-600 rounded-full"></div>
+                            <h3 class="font-bold">Baccalauréat professionnel Système Numérique</h3>
+                            <p class="text-indigo-600 text-sm">Lycée Yves Thépot - Quimper</p>
+                            <p class="text-gray-500 text-sm">Mention : Très bien - 2025</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Languages Section -->
+                <section class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-2xl font-bold font-space flex items-center mb-6">
+                        <i data-feather="globe" class="mr-2 text-indigo-600"></i> Languages
+                    </h2>
+                    
+                    <div class="space-y-3">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Français</span>
+                                <span class="text-gray-500">Langue maternelle</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">English</span>
+                                <span class="text-gray-500">Correct</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 30%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium">Spanish</span>
+                                <span class="text-gray-500">Débutant</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 10%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Vanta.js
+        VANTA.GLOBE({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x6366f1,
+            backgroundColor: 0xf8fafc,
+            size: 0.8
+        });
+
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Modal functionality
+        const editAboutBtn = document.getElementById('editAbout');
+        const editModal = document.getElementById('editModal');
+        const closeModalBtn = document.getElementById('closeModal');
+        const cancelEditBtn = document.getElementById('cancelEdit');
+        const profileForm = document.getElementById('profileForm');
+        
+        editAboutBtn.addEventListener('click', () => {
+            editModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeModalBtn.addEventListener('click', () => {
+            editModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+        
+        cancelEditBtn.addEventListener('click', () => {
+            editModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+        
+        profileForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('inputName').value;
+            const title = document.getElementById('inputTitle').value;
+            const bio = document.getElementById('inputBio').value;
+            const photo = document.getElementById('inputPhoto').value;
+            const skills = document.getElementById('inputSkills').value;
+            
+            // Update profile
+            if (name) document.getElementById('name').textContent = name;
+            if (title) document.getElementById('title').textContent = title;
+            if (bio) document.getElementById('bio').textContent = bio;
+            if (photo) document.querySelector('img[alt="Profile Picture"]').src = photo;
+            
+            // Update skills if provided
+            if (skills) {
+                const skillsContainer = document.querySelector('.flex-wrap.gap-2');
+                skillsContainer.innerHTML = skills.split(',').map(skill => 
+                    `<span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">${skill.trim()}</span>`
+                ).join('');
+            }
+            
+            editModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close modal when clicking outside
+        editModal.addEventListener('click', (e) => {
+            if (e.target === editModal) {
+                editModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Export full CV to PDF and open in new tab
+        const exportPdfBtn = document.getElementById('exportPdfBtn');
+        const cvRoot = document.getElementById('cvRoot');
+        if (exportPdfBtn && cvRoot && window.html2pdf) {
+            exportPdfBtn.addEventListener('click', async () => {
+                // Temporarily ensure a white background for PDF
+                const previousBg = document.body.style.backgroundColor;
+                document.body.style.backgroundColor = '#ffffff';
+
+                // Build the PDF with html2pdf
+                const opt = {
+                    margin:       [10, 10, 10, 10],
+                    filename:     'CV_Nicolas_Kerneis.pdf',
+                    image:        { type: 'jpeg', quality: 0.98 },
+                    html2canvas:  { scale: 2, useCORS: true, backgroundColor: '#ffffff', windowWidth: document.documentElement.scrollWidth },
+                    jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                };
+
+                try {
+                    // Generate a Blob first so we can both open and download
+                    const worker = html2pdf().set(opt).from(cvRoot).toPdf();
+                    const pdf = await worker.get('pdf');
+                    const blob = pdf.output('blob');
+
+                    // Open in a new tab
+                    const blobUrl = URL.createObjectURL(blob);
+                    window.open(blobUrl, '_blank');
+
+                    // Also trigger a download
+                    const a = document.createElement('a');
+                    a.href = blobUrl;
+                    a.download = opt.filename;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+
+                    // Revoke URL after a short delay
+                    setTimeout(() => URL.revokeObjectURL(blobUrl), 5000);
+                } catch (err) {
+                    console.error('PDF export error:', err);
+                } finally {
+                    document.body.style.backgroundColor = previousBg;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

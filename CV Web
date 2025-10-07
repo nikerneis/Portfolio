@@ -96,13 +96,13 @@
                             <p class="text-indigo-600 font-medium" id="title">Etudiant en BTS SIO.</p>
                         </div>
                         <div class="flex space-x-2 mt-4 md:mt-0">
-                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
+                            <a href="https://github.com/nikerneis" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition" target="_blank">
                                 <i data-feather="github"></i>
                             </a>
                             <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
                                 <i data-feather="linkedin"></i>
                             </a>
-                            <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
+                            <a href="https://x.com/0xNicodev" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition" target="_blank">
                                 <i data-feather="twitter"></i>
                             </a>
                             <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
@@ -306,14 +306,14 @@
                             <div class="absolute -left-2 top-0 w-4 h-4 bg-indigo-600 rounded-full"></div>
                             <h3 class="font-bold">Brevet des colleges</h3>
                             <p class="text-indigo-600 text-sm">College Kervihan - Fouesnant</p>
-                            <p class="text-gray-500 text-sm">Mention : Bien   -    2022</p>
+                            <p class="text-gray-500 text-sm">Mention : Assez Bien   -    2022</p>
                         </div>
                         
                         <div class="border-l-2 border-indigo-200 pl-4 pb-4 relative">
                             <div class="absolute -left-2 top-0 w-4 h-4 bg-indigo-600 rounded-full"></div>
                             <h3 class="font-bold">Baccalauréat professionnel Système Numérique</h3>
                             <p class="text-indigo-600 text-sm">Lycée Yves Thépot - Quimper</p>
-                            <p class="text-gray-500 text-sm">Mention : Très bien - 2025</p>
+                            <p class="text-gray-500 text-sm">Mention : Bien - 2025</p>
                         </div>
                     </div>
                 </section>
